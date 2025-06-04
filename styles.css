@@ -1,0 +1,310 @@
+#inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    font-size: 16px;
+}
+
+header {
+    background-color: #1e4d6b;
+    color: white;
+    padding: 1.25em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 1.25em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.625em 1.25em;
+    margin: 0 0.625em;
+}
+
+nav a:hover {
+    background-color: #2c7da0;
+    border-radius: 0.3125em;
+}
+
+.articulos {
+    max-width: 75em;
+    margin: 2em auto;
+    padding: 5em 1.25em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em;
+}
+
+.articulos article:last-child {
+    grid-column: 1 / -1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.625em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.articulos article:last-child .imagen-container {
+    width: 100%;
+    height: 400px;
+}
+
+.articulos article:last-child .contenido-container {
+    padding: 2em;
+}
+
+.articulos article:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+article {
+    background-color: white;
+    padding: 2em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+article h2 {
+    color: #2d6a4f;
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.4;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3125em;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5em;
+}
+
+article img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+article time {
+    color: #666666;
+    font-style: italic;
+    display: block;
+    margin: 1em 0 1.5em;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+.contacto {
+    max-width: 75em;
+    margin: 2.5em auto;
+    padding: 0 1.25em;
+}
+
+.contacto-container {
+    display: flex;
+    gap: 2em;
+    background-color: white;
+    border-radius: 0.625em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.formulario-container {
+    flex: 1;
+    padding: 2em;
+}
+
+.mapa-container {
+    flex: 1;
+    min-height: 500px;
+}
+
+.contacto h2 {
+    color: #1e4d6b;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+form div {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333333;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 0.0625em solid #cccccc;
+    border-radius: 0.25em;
+    font-size: 1em;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+button {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e4d6b;
+}
+
+footer {
+    background-color: #1e4d6b;
+    color: white;
+    text-align: center;
+    padding: 1.25em;
+    margin-top: 2.5em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.625em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 8em;
+}
+
+@media (max-width: 48em) {
+    .articulos {
+        grid-template-columns: 1fr;
+    }
+
+    .articulos article:last-child .imagen-container {
+        height: 250px;
+    }
+
+    .articulos article:last-child .contenido-container {
+        padding: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.3125em 0;
+    }
+
+    .contacto-container {
+        flex-direction: column;
+    }
+
+    .formulario-container {
+        padding: 1.5em;
+    }
+
+    .mapa-container {
+        min-height: 300px;
+    }
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+@media (max-width: 48em) {
+    header {
+        padding: 1em;
+        min-height: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        padding: 0.5em;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        border-radius: 3px;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1e4d6b;
+        padding: 1em 0;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.8em;
+        margin: 0;
+    }
+} 
